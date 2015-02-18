@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AB26474E1C880EF50F76762F /* TLTJoke.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2642EF0E2C2610D70D73BC /* TLTJoke.m */; };
+		C52F11CF1A95429900A37582 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = C52F11CE1A95429900A37582 /* NSString+HTML.m */; };
 		C54389C51A94F8AA00E84E3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C54389C41A94F8AA00E84E3B /* main.m */; };
 		C54389C81A94F8AA00E84E3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C54389C71A94F8AA00E84E3B /* AppDelegate.m */; };
 		C54389CB1A94F8AA00E84E3B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54389CA1A94F8AA00E84E3B /* ViewController.m */; };
@@ -16,8 +17,6 @@
 		C54389D31A94F8AA00E84E3B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C54389D11A94F8AA00E84E3B /* LaunchScreen.xib */; };
 		C54389DF1A94F8AA00E84E3B /* watchnorrisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C54389DE1A94F8AA00E84E3B /* watchnorrisTests.m */; };
 		C54389EB1A94F91200E84E3B /* TLTApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C54389EA1A94F91200E84E3B /* TLTApiClient.m */; };
-		C54389EE1A9503DA00E84E3B /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = C54389ED1A9503DA00E84E3B /* NSString+HTML.m */; };
-		C54389EF1A9503DA00E84E3B /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = C54389ED1A9503DA00E84E3B /* NSString+HTML.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +32,8 @@
 /* Begin PBXFileReference section */
 		AB2642EF0E2C2610D70D73BC /* TLTJoke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLTJoke.m; sourceTree = "<group>"; };
 		AB264E86076FBC292572145F /* TLTJoke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLTJoke.h; sourceTree = "<group>"; };
+		C52F11CD1A95429900A37582 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		C52F11CE1A95429900A37582 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
 		C54389BF1A94F8AA00E84E3B /* watchnorris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watchnorris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54389C31A94F8AA00E84E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C54389C41A94F8AA00E84E3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -48,8 +49,6 @@
 		C54389DE1A94F8AA00E84E3B /* watchnorrisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = watchnorrisTests.m; sourceTree = "<group>"; };
 		C54389E91A94F91200E84E3B /* TLTApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLTApiClient.h; sourceTree = "<group>"; };
 		C54389EA1A94F91200E84E3B /* TLTApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLTApiClient.m; sourceTree = "<group>"; };
-		C54389EC1A9503DA00E84E3B /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
-		C54389ED1A9503DA00E84E3B /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +78,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		C52F11CC1A95429900A37582 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C52F11CD1A95429900A37582 /* NSString+HTML.h */,
+				C52F11CE1A95429900A37582 /* NSString+HTML.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		C54389B61A94F8AA00E84E3B = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +108,7 @@
 		C54389C11A94F8AA00E84E3B /* watchnorris */ = {
 			isa = PBXGroup;
 			children = (
+				C52F11CC1A95429900A37582 /* Categories */,
 				AB26435C4C83D6C9BE0545FD /* Models */,
 				C54389E81A94F8D500E84E3B /* Network */,
 				C54389C61A94F8AA00E84E3B /* AppDelegate.h */,
@@ -145,8 +154,6 @@
 			children = (
 				C54389E91A94F91200E84E3B /* TLTApiClient.h */,
 				C54389EA1A94F91200E84E3B /* TLTApiClient.m */,
-				C54389EC1A9503DA00E84E3B /* NSString+HTML.h */,
-				C54389ED1A9503DA00E84E3B /* NSString+HTML.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -255,7 +262,7 @@
 				C54389C81A94F8AA00E84E3B /* AppDelegate.m in Sources */,
 				C54389EB1A94F91200E84E3B /* TLTApiClient.m in Sources */,
 				C54389C51A94F8AA00E84E3B /* main.m in Sources */,
-				C54389EE1A9503DA00E84E3B /* NSString+HTML.m in Sources */,
+				C52F11CF1A95429900A37582 /* NSString+HTML.m in Sources */,
 				AB26474E1C880EF50F76762F /* TLTJoke.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,7 +271,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C54389EF1A9503DA00E84E3B /* NSString+HTML.m in Sources */,
 				C54389DF1A94F8AA00E84E3B /* watchnorrisTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
