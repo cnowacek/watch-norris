@@ -21,4 +21,11 @@
  */
 - (void)getRandomJoke:(void (^)(TLTJoke *joke, NSError *error))completionHandler;
 
+/**
+ * Fetches a specific Chuck Norris joke
+ * @param jokeId The completion ID of the joke to fetch
+ * @param completionHandler The completion block that's called after the request is completed.
+ */
+- (void)getJokeWithID:(NSNumber *)jokeId completion:(void (^)(TLTJoke *joke, NSError *error))completionHandler;
+
 @end

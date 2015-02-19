@@ -23,15 +23,33 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.client = [[TLTApiClient alloc] init];
-    [self fetchJoke];
+    
+    if (self.jokeId) {
+        [self fetchRandomJoke];
+    } else {
+        [self fetchJokeWithId:@1];
+    }
+    
 }
 
 - (IBAction)fetchButtonPressed:(id)sender {
-    [self fetchJoke];
+    [self fetchRandomJoke];
 }
 
-- (void)fetchJoke {
+- (void)fetchRandomJoke {
     [self.client getRandomJoke:^(TLTJoke *joke, NSError *error) {
+        if (error) {
+            // Do error things
+            NSLog(@"Error: %@", error.localizedDescription);
+            return;
+        }
+        
+        self.jokeLabel.text = joke.unescapedJoke;
+    }];
+}
+
+- (void)fetchJokeWithId:(NSNumber *)jokeId {
+    [self.client getJokeWithID:jokeId completion:^(TLTJoke *joke, NSError *error) {
         if (error) {
             // Do error things
             NSLog(@"Error: %@", error.localizedDescription);
