@@ -24,17 +24,25 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.client = [[TLTApiClient alloc] init];
     
-    if (self.jokeId) {
-        [self fetchRandomJoke];
+    if (self.joke && self.joke.joke.length) {
+        [self updateViews];
+    } else if (self.joke && self.joke.jokeId) {
+        [self fetchJokeWithId:self.joke.jokeId];
     } else {
-        [self fetchJokeWithId:@1];
+        [self fetchRandomJoke];
     }
     
+}
+
+- (void)updateViews {
+    self.jokeLabel.text = self.joke.unescapedJoke;
 }
 
 - (IBAction)fetchButtonPressed:(id)sender {
     [self fetchRandomJoke];
 }
+
+#pragma mark - API Methods
 
 - (void)fetchRandomJoke {
     [self.client getRandomJoke:^(TLTJoke *joke, NSError *error) {
@@ -44,7 +52,8 @@
             return;
         }
         
-        self.jokeLabel.text = joke.unescapedJoke;
+        self.joke = joke;
+        [self updateViews];
     }];
 }
 
@@ -56,7 +65,8 @@
             return;
         }
         
-        self.jokeLabel.text = joke.unescapedJoke;
+        self.joke = joke;
+        [self updateViews];
     }];
 }
 

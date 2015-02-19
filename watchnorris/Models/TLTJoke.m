@@ -6,16 +6,30 @@
 #import "TLTJoke.h"
 #import "NSString+HTML.h"
 
-static NSString * const JokeCategoriesKey = @"categories";
-static NSString * const JokeIdKey = @"id";
-static NSString * const JokeJokeKey = @"joke";
-
 @implementation TLTJoke
 
 + (instancetype)instanceFromDictionary:(NSDictionary *)dictionary {
     TLTJoke *joke = [[TLTJoke alloc] init];
     [joke setPropertiesFromDictionary:dictionary];
     return joke;
+}
+
+- (NSDictionary *)dictionaryRepresentation {
+    NSMutableDictionary *mDictionary = [NSMutableDictionary dictionary];
+    
+    if (self.categories) {
+        mDictionary[JokeCategoriesKey] = self.categories;
+    }
+    
+    if (self.jokeId) {
+        mDictionary[JokeIdKey] = self.jokeId;
+    }
+    
+    if (self.joke) {
+        mDictionary[JokeJokeKey] = self.joke;
+    }
+    
+    return mDictionary;
 }
 
 - (void)setPropertiesFromDictionary:(NSDictionary *)dictionary {

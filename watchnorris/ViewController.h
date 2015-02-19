@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class TLTJoke;
+
 @interface ViewController : UIViewController
 
-@property (nonatomic, strong)   NSNumber *jokeId;
+@property (nonatomic, strong)   TLTJoke *joke;
 
 @end
 

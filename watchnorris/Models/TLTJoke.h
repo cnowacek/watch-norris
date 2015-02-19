@@ -5,6 +5,12 @@
 
 #import <Foundation/Foundation.h>
 
+static NSString * const JokeModelName = @"joke";
+
+static NSString * const JokeCategoriesKey = @"categories";
+static NSString * const JokeIdKey = @"id";
+static NSString * const JokeJokeKey = @"joke";
+
 /**
  * Holds a Joke object
  */
@@ -20,6 +26,12 @@
  * @return An instance of a Joke model object.
  */
 + (instancetype)instanceFromDictionary:(NSDictionary *)dictionary;
+
+/**
+ * Creates a dictionary object that represents a Joke object.
+ * @return A dictionary with key/value pairs that represent a Joke object
+ */
+- (NSDictionary *)dictionaryRepresentation;
 
 /**
  * Sets the properties for a Joke given a dictionary of key/value pairs
