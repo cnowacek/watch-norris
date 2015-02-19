@@ -12,6 +12,7 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *jokeLabel;
 @property (nonatomic, strong)   TLTApiClient *client;
 
 @end
@@ -25,6 +26,10 @@
     [self fetchJoke];
 }
 
+- (IBAction)fetchButtonPressed:(id)sender {
+    [self fetchJoke];
+}
+
 - (void)fetchJoke {
     [self.client getRandomJoke:^(TLTJoke *joke, NSError *error) {
         if (error) {
@@ -33,7 +38,7 @@
             return;
         }
         
-        NSLog(@"Joke: %@", joke.unescapedJoke);
+        self.jokeLabel.text = joke.unescapedJoke;
     }];
 }
 

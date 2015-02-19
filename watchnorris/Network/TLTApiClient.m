@@ -34,19 +34,25 @@ static NSString * const ApiRandomJokePathString = @"jokes/random?exclude=[explic
     NSURL *url = [NSURL URLWithString:ApiRandomJokePathString relativeToURL:self.baseUrl];
     [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error) {
-            completionHandler(nil, error);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(nil, error);
+            });
             return;
         }
         NSError *jsonError = nil;
         id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
 
         if (jsonError) {
-            completionHandler(nil, jsonError);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(nil, jsonError);
+            });
             return;
         }
 
         TLTJoke *joke = [TLTJoke instanceFromDictionary:json[ApiJSONValueKey]];
-        completionHandler(joke, nil);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completionHandler(joke, nil);
+        });
     }] resume];
 }
 
