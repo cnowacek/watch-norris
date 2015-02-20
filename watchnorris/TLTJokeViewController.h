@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  ViewController.h
 //  watchnorris
 //
 //  Created by Charlie Nowacek on 2/18/15.
@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@class TLTJoke;
 
-@property (strong, nonatomic) UIWindow *window;
+@interface TLTJokeViewController : UIViewController
 
+@property (nonatomic, strong)   TLTJoke *joke;
 
 @end
 

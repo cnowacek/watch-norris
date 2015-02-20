@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Tilt. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "TLTAppDelegate.h"
 
-@interface AppDelegate ()
+@interface TLTAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation TLTAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

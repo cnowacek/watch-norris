@@ -6,18 +6,18 @@
 //  Copyright (c) 2015 Tilt. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TLTJokeViewController.h"
 #import "TLTApiClient.h"
 #import "TLTJoke.h"
 
-@interface ViewController ()
+@interface TLTJokeViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *jokeLabel;
 @property (nonatomic, strong)   TLTApiClient *client;
 
 @end
 
-@implementation ViewController
+@implementation TLTJokeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

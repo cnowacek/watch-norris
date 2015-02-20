@@ -10,8 +10,8 @@
 		AB26474E1C880EF50F76762F /* TLTJoke.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2642EF0E2C2610D70D73BC /* TLTJoke.m */; };
 		C52F11CF1A95429900A37582 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = C52F11CE1A95429900A37582 /* NSString+HTML.m */; };
 		C54389C51A94F8AA00E84E3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C54389C41A94F8AA00E84E3B /* main.m */; };
-		C54389C81A94F8AA00E84E3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C54389C71A94F8AA00E84E3B /* AppDelegate.m */; };
-		C54389CB1A94F8AA00E84E3B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54389CA1A94F8AA00E84E3B /* ViewController.m */; };
+		C54389C81A94F8AA00E84E3B /* TLTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C54389C71A94F8AA00E84E3B /* TLTAppDelegate.m */; };
+		C54389CB1A94F8AA00E84E3B /* TLTJokeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54389CA1A94F8AA00E84E3B /* TLTJokeViewController.m */; };
 		C54389CE1A94F8AA00E84E3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C54389CC1A94F8AA00E84E3B /* Main.storyboard */; };
 		C54389D01A94F8AA00E84E3B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C54389CF1A94F8AA00E84E3B /* Images.xcassets */; };
 		C54389D31A94F8AA00E84E3B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C54389D11A94F8AA00E84E3B /* LaunchScreen.xib */; };
@@ -37,10 +37,10 @@
 		C54389BF1A94F8AA00E84E3B /* watchnorris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watchnorris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54389C31A94F8AA00E84E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C54389C41A94F8AA00E84E3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C54389C61A94F8AA00E84E3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C54389C71A94F8AA00E84E3B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C54389C91A94F8AA00E84E3B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C54389CA1A94F8AA00E84E3B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C54389C61A94F8AA00E84E3B /* TLTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLTAppDelegate.h; sourceTree = "<group>"; };
+		C54389C71A94F8AA00E84E3B /* TLTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLTAppDelegate.m; sourceTree = "<group>"; };
+		C54389C91A94F8AA00E84E3B /* TLTJokeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLTJokeViewController.h; sourceTree = "<group>"; };
+		C54389CA1A94F8AA00E84E3B /* TLTJokeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLTJokeViewController.m; sourceTree = "<group>"; };
 		C54389CD1A94F8AA00E84E3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C54389CF1A94F8AA00E84E3B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C54389D21A94F8AA00E84E3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -111,10 +111,10 @@
 				C52F11CC1A95429900A37582 /* Categories */,
 				AB26435C4C83D6C9BE0545FD /* Models */,
 				C54389E81A94F8D500E84E3B /* Network */,
-				C54389C61A94F8AA00E84E3B /* AppDelegate.h */,
-				C54389C71A94F8AA00E84E3B /* AppDelegate.m */,
-				C54389C91A94F8AA00E84E3B /* ViewController.h */,
-				C54389CA1A94F8AA00E84E3B /* ViewController.m */,
+				C54389C61A94F8AA00E84E3B /* TLTAppDelegate.h */,
+				C54389C71A94F8AA00E84E3B /* TLTAppDelegate.m */,
+				C54389C91A94F8AA00E84E3B /* TLTJokeViewController.h */,
+				C54389CA1A94F8AA00E84E3B /* TLTJokeViewController.m */,
 				C54389CC1A94F8AA00E84E3B /* Main.storyboard */,
 				C54389CF1A94F8AA00E84E3B /* Images.xcassets */,
 				C54389D11A94F8AA00E84E3B /* LaunchScreen.xib */,
@@ -258,8 +258,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C54389CB1A94F8AA00E84E3B /* ViewController.m in Sources */,
-				C54389C81A94F8AA00E84E3B /* AppDelegate.m in Sources */,
+				C54389CB1A94F8AA00E84E3B /* TLTJokeViewController.m in Sources */,
+				C54389C81A94F8AA00E84E3B /* TLTAppDelegate.m in Sources */,
 				C54389EB1A94F91200E84E3B /* TLTApiClient.m in Sources */,
 				C54389C51A94F8AA00E84E3B /* main.m in Sources */,
 				C52F11CF1A95429900A37582 /* NSString+HTML.m in Sources */,
