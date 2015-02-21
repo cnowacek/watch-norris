@@ -32,6 +32,7 @@
         [self fetchRandomJoke];
     }
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receivedJoke:) name:@"WatchKitSaysHi" object:nil];
 }
 
 - (void)updateViews {
@@ -40,6 +41,14 @@
 
 - (IBAction)fetchButtonPressed:(id)sender {
     [self fetchRandomJoke];
+}
+
+- (void)receivedJoke:(NSNotification *)notification {
+    NSDictionary *userInfo = notification.userInfo;
+    TLTJoke *joke = [TLTJoke instanceFromDictionary:userInfo[JokeModelName]];
+    
+    self.joke = joke;
+    [self updateViews];
 }
 
 #pragma mark - API Methods

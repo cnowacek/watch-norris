@@ -34,12 +34,6 @@ static NSString * const JokeJokeKey = @"joke";
 - (NSDictionary *)dictionaryRepresentation;
 
 /**
- * Sets the properties for a Joke given a dictionary of key/value pairs
- * @param dictionary The key/value pairs that represent a Joke object's properties
- */
-- (void)setPropertiesFromDictionary:(NSDictionary *)dictionary;
-
-/**
  * Returns the joke string property that has been unescaped of any 
  * HTML entities. (e.g. &amp; -> &, &quot; -> ")
  * @return The unescaped joke string
